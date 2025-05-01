@@ -52,3 +52,13 @@ class SnakeGame {
             }
         }
     }
+
+    private:
+    SDL_Window* window;
+    SDL_Renderer* renderer;
+
+    std::vector<Point> snake;  // a kígyó teste
+    Point apple;               // alma pozíciója
+    Direction dir;             // jelenlegi irány
+    bool grow;                 // kell-e nőni?
+    bool running;              // játék fut-e
