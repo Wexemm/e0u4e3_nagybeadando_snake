@@ -1,7 +1,4 @@
 # `e0u4e3_nagybeadando_snake` package
-# Képernyőkép a játékról
-<p align="center"><img src="snake_game.png" width="60%" /></p>
-
 # Útmutató a játék működéséről, alap szabályokról röviden.
 Ez a program egy klasszikus Snake játék, amelyet C++ és SDL2 segítségével készítettem.
 A játék egy ablakos felületen jelenik meg, a kígyó nyilakkal vezérelhető, és célja az, hogy minél több almát egyen meg, miközben elkerüli az ütközést önmagával és a falakkal.
@@ -18,6 +15,8 @@ Minden időlépésnél (100ms-onként):
 
 SDL eseménykezelő (SDL_PollEvent) figyeli a SDL_KEYDOWN eseményeket.
 Az irány nem fordulhat 180 fokkal vissza, így nem lehet pl. fentről rögtön lefelé menni.
+# Képernyőkép a játékról
+<p align="center"><img src="snake_game.png" width="60%" /></p>
 
 # Játék forditása
 ``` r
