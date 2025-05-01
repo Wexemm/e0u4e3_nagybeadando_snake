@@ -19,7 +19,10 @@ SDL eseménykezelő (SDL_PollEvent) figyeli a SDL_KEYDOWN eseményeket.
 Az irány nem fordulhat 180 fokkal vissza, így nem lehet pl. fentről rögtön lefelé menni.
 
 # Játék forditása
+``` r
 g++ snake.cpp -o snake_sdl2 -lSDL2
-
+```
 # Játék futtatása
+``` r
 ./snake_sdl2
+```
