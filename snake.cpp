@@ -79,3 +79,14 @@ class SnakeGame {
             }
         }
     }
+
+    // Kígyó mozgatása, növekedés, ütközésellenőrzés
+    void update() {
+        Point head = snake.front();  // aktuális fej
+        // Elmozdítás irány alapján
+        switch (dir) {
+            case UP:    head.y--; break;
+            case DOWN:  head.y++; break;
+            case LEFT:  head.x--; break;
+            case RIGHT: head.x++; break;
+        }
