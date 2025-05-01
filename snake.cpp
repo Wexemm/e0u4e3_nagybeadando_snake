@@ -24,7 +24,7 @@ class SnakeGame {
         SnakeGame() : dir(RIGHT), grow(false), running(true) {
             SDL_Init(SDL_INIT_VIDEO);  // SDL inicializálás
             // Ablak létrehozása
-            window = SDL_CreateWindow("🐍 SDL2 Snake", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WIDTH, HEIGHT, 0);
+            window = SDL_CreateWindow("Snake játék", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WIDTH, HEIGHT, 0);
             // Renderer létrehozása
             renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
             // Kígyó inicializálása középre
@@ -79,7 +79,6 @@ class SnakeGame {
             }
         }
     }
-
     // Kígyó mozgatása, növekedés, ütközésellenőrzés
     void update() {
         Point head = snake.front();  // aktuális fej
@@ -104,7 +103,6 @@ if (head.x == apple.x && head.y == apple.y) {
     grow = true;
     spawnApple();
 }
-
  // Ha nem evett almát, akkor farok eltávolítása
  if (!grow) {
     snake.pop_back();
@@ -112,7 +110,6 @@ if (head.x == apple.x && head.y == apple.y) {
     grow = false;
 }
 }
-
 // Ellenőrzi, hogy a fej beleütközik-e a saját testébe
 bool hitsSelf(const Point& head) {
     for (size_t i = 1; i < snake.size(); ++i) {
@@ -121,13 +118,11 @@ bool hitsSelf(const Point& head) {
     }
     return false;
 }
-
 // Véletlenszerű alma pozíció generálása
 void spawnApple() {
     apple.x = rand() % (WIDTH / CELL_SIZE);
     apple.y = rand() % (HEIGHT / CELL_SIZE);
 }
-
  // Kirajzolás
  void render() {
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);  // háttér: fekete
@@ -148,7 +143,6 @@ void spawnApple() {
     SDL_RenderPresent(renderer);  // kirajzolás megjelenítése
 }
 };
-
 // Fő program – itt indul a játék
 int main() {
     srand(static_cast<unsigned>(time(nullptr)));  // véletlenszám inicializálása
