@@ -112,3 +112,12 @@ if (head.x == apple.x && head.y == apple.y) {
     grow = false;
 }
 }
+
+// Ellenőrzi, hogy a fej beleütközik-e a saját testébe
+bool hitsSelf(const Point& head) {
+    for (size_t i = 1; i < snake.size(); ++i) {
+        if (snake[i].x == head.x && snake[i].y == head.y)
+            return true;
+    }
+    return false;
+}
