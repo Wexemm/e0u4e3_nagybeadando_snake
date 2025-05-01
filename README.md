@@ -1,5 +1,5 @@
 # e0u4e3_nagybeadando_snake
-# Útmutató a játék működéséről, alap szabályokról röviden
+# Útmutató a játék működéséről, alap szabályokról röviden.
 Ez a program egy klasszikus Snake játék, amelyet C++ és SDL2 segítségével készítettem.
 A játék egy ablakos felületen jelenik meg, a kígyó nyilakkal vezérelhető, és célja az, hogy minél több almát egyen meg, miközben elkerüli az ütközést önmagával és a falakkal.
 Ez a projekt kiváló belépő szintű játékfejlesztési gyakorlat SDL2-ben, és jól szemlélteti az eseménykezelést, renderelést, és a játékmenet frissítését.
