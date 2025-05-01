@@ -121,3 +121,9 @@ bool hitsSelf(const Point& head) {
     }
     return false;
 }
+
+// Véletlenszerű alma pozíció generálása
+void spawnApple() {
+    apple.x = rand() % (WIDTH / CELL_SIZE);
+    apple.y = rand() % (HEIGHT / CELL_SIZE);
+}
