@@ -90,3 +90,9 @@ class SnakeGame {
             case LEFT:  head.x--; break;
             case RIGHT: head.x++; break;
         }
+
+        // Falba vagy magába ütközés esetén kilépés
+        if (head.x < 0 || head.x >= WIDTH / CELL_SIZE || head.y < 0 || head.y >= HEIGHT / CELL_SIZE || hitsSelf(head)) {
+            running = false;
+            return;
+        }
