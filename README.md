@@ -1,6 +1,6 @@
 # `e0u4e3_nagybeadando_snake` package
 # Képernyőkép a játékról
-<p align="center"><img src="img/snake_game.png" width="60%" /></p>
+<p align="center"><img src="snake_game.png" width="60%" /></p>
 
 # Útmutató a játék működéséről, alap szabályokról röviden.
 Ez a program egy klasszikus Snake játék, amelyet C++ és SDL2 segítségével készítettem.
