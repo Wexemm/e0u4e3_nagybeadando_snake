@@ -1,0 +1,9 @@
+Fejlesztési ötletek:
+
+Pontszámláló: A játék számolja a kigyó által gyűjtött objektumokat, és megjeleníti a pontszámot.
+
+Akadályok: Olyan objektumok, amelyek nem ölik meg a kigyót, de elveszíti a farkának egy részét, ha hozzáér.
+
+Gyorsulás: A kigyó egyre gyorsabban halad. Ha belemegy egy különleges objektumba, 10 másodpercre elképesztően gyors lesz.
+
+Plusz objektumok: Ha összegyűjtesz 3 aranyalmát, kapsz egy életet, amely megvédi a kigyót attól, hogy meghaljon, ha nekimegy a pálya végének vagy a saját farkának.y a farkának
