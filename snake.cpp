@@ -148,3 +148,11 @@ void spawnApple() {
     SDL_RenderPresent(renderer);  // kirajzolás megjelenítése
 }
 };
+
+// Fő program – itt indul a játék
+int main() {
+    srand(static_cast<unsigned>(time(nullptr)));  // véletlenszám inicializálása
+    SnakeGame game;
+    game.run();
+    return 0;
+}
