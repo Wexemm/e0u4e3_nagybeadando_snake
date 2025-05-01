@@ -39,3 +39,16 @@ class SnakeGame {
             SDL_Quit();
         }
     
+        // Fő játékhurok
+    void run() {
+        Uint32 last = SDL_GetTicks();  // utolsó frissítés ideje
+        while (running) {
+            handleInput();  // billentyűkezelés
+            Uint32 now = SDL_GetTicks();
+            if (now - last > 100) {  // kb. 10 FPS frissítés
+                update();    // játékmenet frissítése
+                render();    // kirajzolás
+                last = now;
+            }
+        }
+    }
