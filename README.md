@@ -26,3 +26,6 @@ g++ snake.cpp -o snake_sdl2 -lSDL2
 ``` r
 ./snake_sdl2
 ```
+Let's assume 
+- your Github username is `Wexemm`
+- your ROS 2 repo shold be `e0u4e3_nagybeadando_snake`
