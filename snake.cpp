@@ -127,3 +127,24 @@ void spawnApple() {
     apple.x = rand() % (WIDTH / CELL_SIZE);
     apple.y = rand() % (HEIGHT / CELL_SIZE);
 }
+
+ // Kirajzolás
+ void render() {
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);  // háttér: fekete
+    SDL_RenderClear(renderer);
+
+    // Alma kirajzolása piros négyzetként
+    SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+    SDL_Rect a = {apple.x * CELL_SIZE, apple.y * CELL_SIZE, CELL_SIZE, CELL_SIZE};
+    SDL_RenderFillRect(renderer, &a);
+
+    // Kígyó kirajzolása zöld négyzetekből
+    SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255);
+    for (const auto& s : snake) {
+        SDL_Rect r = {s.x * CELL_SIZE, s.y * CELL_SIZE, CELL_SIZE, CELL_SIZE};
+        SDL_RenderFillRect(renderer, &r);
+    }
+
+    SDL_RenderPresent(renderer);  // kirajzolás megjelenítése
+}
+};
