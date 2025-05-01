@@ -17,3 +17,25 @@ enum Direction { UP, DOWN, LEFT, RIGHT };
 struct Point {
     int x, y;
 };
+
+// Snake játék osztálya
+class SnakeGame {
+    public:
+        SnakeGame() : dir(RIGHT), grow(false), running(true) {
+            SDL_Init(SDL_INIT_VIDEO);  // SDL inicializálás
+            // Ablak létrehozása
+            window = SDL_CreateWindow("🐍 SDL2 Snake", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WIDTH, HEIGHT, 0);
+            // Renderer létrehozása
+            renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+            // Kígyó inicializálása középre
+            snake.push_back({WIDTH / 2 / CELL_SIZE, HEIGHT / 2 / CELL_SIZE});
+            spawnApple();  // első alma elhelyezése
+        }
+    
+        ~SnakeGame() {
+            // SDL erőforrások felszabadítása
+            SDL_DestroyRenderer(renderer);
+            SDL_DestroyWindow(window);
+            SDL_Quit();
+        }
+    
