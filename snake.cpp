@@ -104,3 +104,11 @@ if (head.x == apple.x && head.y == apple.y) {
     grow = true;
     spawnApple();
 }
+
+ // Ha nem evett almát, akkor farok eltávolítása
+ if (!grow) {
+    snake.pop_back();
+} else {
+    grow = false;
+}
+}
