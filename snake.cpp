@@ -62,3 +62,20 @@ class SnakeGame {
     Direction dir;             // jelenlegi irány
     bool grow;                 // kell-e nőni?
     bool running;              // játék fut-e
+
+    // Billentyűesemények kezelése
+    void handleInput() {
+        SDL_Event e;
+        while (SDL_PollEvent(&e)) {
+            if (e.type == SDL_QUIT) running = false;
+            if (e.type == SDL_KEYDOWN) {
+                switch (e.key.keysym.sym) {
+                    // Irányváltás, de nem lehet ellentétes irányba fordulni
+                    case SDLK_UP:    if (dir != DOWN) dir = UP; break;
+                    case SDLK_DOWN:  if (dir != UP) dir = DOWN; break;
+                    case SDLK_LEFT:  if (dir != RIGHT) dir = LEFT; break;
+                    case SDLK_RIGHT: if (dir != LEFT) dir = RIGHT; break;
+                }
+            }
+        }
+    }
