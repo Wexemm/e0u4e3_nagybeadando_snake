@@ -96,3 +96,11 @@ class SnakeGame {
             running = false;
             return;
         }
+// Új fej pozíció beszúrása az elejére
+snake.insert(snake.begin(), head);
+
+// Almaevés esetén növekedés és új alma
+if (head.x == apple.x && head.y == apple.y) {
+    grow = true;
+    spawnApple();
+}
